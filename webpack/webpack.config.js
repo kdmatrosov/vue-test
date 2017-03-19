@@ -9,7 +9,7 @@ module.exports = {
     'index': './src/main.js'
   },
   output: {
-    path: __dirname + '/bundle',
+    path:  './bundle',
     publicPath: '/',
     filename: '[name].js'
   },
@@ -22,7 +22,7 @@ module.exports = {
     rules: rules
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({filename: '[name].css', allChunks: true, disable: NODE_ENV === 'watch'}),
     new webpack.optimize.CommonsChunkPlugin({
@@ -33,6 +33,9 @@ module.exports = {
     })
   ],
   resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js'
+    },
     extensions: ['.js']
   },
   devServer: {

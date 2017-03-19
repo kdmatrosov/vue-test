@@ -9,7 +9,7 @@ export default {
   name: 'test',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App!!'
     }
   }
 }
@@ -31,7 +31,7 @@ li {
   margin: 0 10px;
 }
 
-a {
+* {
   color: #42b983;
 }
 </style>
